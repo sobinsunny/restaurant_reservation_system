@@ -12,6 +12,8 @@ gem 'rails', '~> 5.1.4'
 gem 'apostle'
 gem 'puma', '~> 3.7'
 gem 'validates_email_format_of'
+gem 'pg', '~> 0.18'
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -26,13 +28,11 @@ gem 'validates_email_format_of'
 # gem 'rack-cors'
 
 group :development, :test do
-  gem 'sqlite3'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-rails'
 end
 
 group :production do
-  gem 'pg'
 end
 
 group :development do

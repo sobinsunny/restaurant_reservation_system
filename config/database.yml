@@ -10,14 +10,21 @@ default: &default
 
 development:
   <<: *default
-  adapter: sqlite3
-  database: db/development.sqlite3
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  database: reservation_development_db
 test:
   <<: *default
-  adapter: sqlite3
-  database: db/test.sqlite3
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  database: reservation_test_db
 
 production:
   <<: *default
   adapter: postgresql
-  encoding: unicode
+  pool: 5
+  encoding: utf8
+  database: reservation_production_db
+
