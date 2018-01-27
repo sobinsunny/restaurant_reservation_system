@@ -3366,3 +3366,365 @@ Processing by RestaurantsController#create as */*
 Completed 500 Internal Server Error in 4ms (Views: 0.6ms | ActiveRecord: 0.8ms)
 
 
+Started PATCH "/reservations/1" for 127.0.0.1 at 2018-01-27 09:22:13 +0530
+Processing by ReservationsController#update as */*
+  Parameters: {"reservation"=>{"guest_party_size"=>1, "requested_date_time"=>"28-1-2019 1.30 PM"}, "id"=>"1"}
+  [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTable Load (0.4ms)[0m  [1m[34mSELECT  "tables".* FROM "tables" WHERE "tables"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGuest Load (0.4ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (317.7ms)[0m  [1m[33mUPDATE "reservations" SET "requested_date_time" = $1, "updated_at" = $2 WHERE "reservations"."id" = $3[0m  [["requested_date_time", "2019-01-28 18:00:00"], ["updated_at", "2018-01-27 03:52:13.702053"], ["id", 1]]
+DEPRECATION WARNING: The behavior of `attribute_changed?` inside of after callbacks will be changing in the next version of Rails. The new return value will reflect the behavior of calling the method after `save` returned (e.g. the opposite of what it returns now). To maintain the current behavior, use `saved_change_to_attribute?` instead. (called from compose_guest_update_email at /Users/sobin/Documents/my_projects/reservation/app/services/notification_mail_service.rb:22)
+DEPRECATION WARNING: The behavior of `attribute_changed?` inside of after callbacks will be changing in the next version of Rails. The new return value will reflect the behavior of calling the method after `save` returned (e.g. the opposite of what it returns now). To maintain the current behavior, use `saved_change_to_attribute?` instead. (called from compose_guest_update_email at /Users/sobin/Documents/my_projects/reservation/app/services/notification_mail_service.rb:24)
+DEPRECATION WARNING: The behavior of `attribute_change` inside of after callbacks will be changing in the next version of Rails. The new return value will reflect the behavior of calling the method after `save` returned (e.g. the opposite of what it returns now). To maintain the current behavior, use `saved_change_to_attribute` instead. (called from compose_guest_update_email at /Users/sobin/Documents/my_projects/reservation/app/services/notification_mail_service.rb:24)
+DEPRECATION WARNING: The behavior of `attribute_changed?` inside of after callbacks will be changing in the next version of Rails. The new return value will reflect the behavior of calling the method after `save` returned (e.g. the opposite of what it returns now). To maintain the current behavior, use `saved_change_to_attribute?` instead. (called from compose_guest_update_email at /Users/sobin/Documents/my_projects/reservation/app/services/notification_mail_service.rb:24)
+DEPRECATION WARNING: The behavior of `changed_attributes` inside of after callbacks will be changing in the next version of Rails. The new return value will reflect the behavior of calling the method after `save` returned (e.g. the opposite of what it returns now). To maintain the current behavior, use `saved_changes.transform_values(&:first)` instead. (called from compose_guest_update_email at /Users/sobin/Documents/my_projects/reservation/app/services/notification_mail_service.rb:24)
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: The behavior of `attribute_changed?` inside of after callbacks will be changing in the next version of Rails. The new return value will reflect the behavior of calling the method after `save` returned (e.g. the opposite of what it returns now). To maintain the current behavior, use `saved_change_to_attribute?` instead. (called from compose_update_restaurant_email at /Users/sobin/Documents/my_projects/reservation/app/services/notification_mail_service.rb:34)
+DEPRECATION WARNING: The behavior of `attribute_changed?` inside of after callbacks will be changing in the next version of Rails. The new return value will reflect the behavior of calling the method after `save` returned (e.g. the opposite of what it returns now). To maintain the current behavior, use `saved_change_to_attribute?` instead. (called from compose_update_restaurant_email at /Users/sobin/Documents/my_projects/reservation/app/services/notification_mail_service.rb:36)
+DEPRECATION WARNING: The behavior of `attribute_change` inside of after callbacks will be changing in the next version of Rails. The new return value will reflect the behavior of calling the method after `save` returned (e.g. the opposite of what it returns now). To maintain the current behavior, use `saved_change_to_attribute` instead. (called from compose_update_restaurant_email at /Users/sobin/Documents/my_projects/reservation/app/services/notification_mail_service.rb:36)
+DEPRECATION WARNING: The behavior of `attribute_changed?` inside of after callbacks will be changing in the next version of Rails. The new return value will reflect the behavior of calling the method after `save` returned (e.g. the opposite of what it returns now). To maintain the current behavior, use `saved_change_to_attribute?` instead. (called from compose_update_restaurant_email at /Users/sobin/Documents/my_projects/reservation/app/services/notification_mail_service.rb:36)
+DEPRECATION WARNING: The behavior of `changed_attributes` inside of after callbacks will be changing in the next version of Rails. The new return value will reflect the behavior of calling the method after `save` returned (e.g. the opposite of what it returns now). To maintain the current behavior, use `saved_changes.transform_values(&:first)` instead. (called from compose_update_restaurant_email at /Users/sobin/Documents/my_projects/reservation/app/services/notification_mail_service.rb:36)
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ReservationSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 200 OK in 3085ms (Views: 2.2ms | ActiveRecord: 329.1ms)
+
+
+Started PATCH "/reservations/1" for 127.0.0.1 at 2018-01-27 09:22:30 +0530
+Processing by ReservationsController#update as */*
+  Parameters: {"reservation"=>{"guest_party_size"=>1, "requested_date_time"=>"28-1-2019 1.30 PM"}, "id"=>"1"}
+  [1m[36mReservation Load (1.2ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTable Load (0.7ms)[0m  [1m[34mSELECT  "tables".* FROM "tables" WHERE "tables"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGuest Load (0.5ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: The behavior of `attribute_changed?` inside of after callbacks will be changing in the next version of Rails. The new return value will reflect the behavior of calling the method after `save` returned (e.g. the opposite of what it returns now). To maintain the current behavior, use `saved_change_to_attribute?` instead. (called from compose_guest_update_email at /Users/sobin/Documents/my_projects/reservation/app/services/notification_mail_service.rb:22)
+DEPRECATION WARNING: The behavior of `attribute_changed?` inside of after callbacks will be changing in the next version of Rails. The new return value will reflect the behavior of calling the method after `save` returned (e.g. the opposite of what it returns now). To maintain the current behavior, use `saved_change_to_attribute?` instead. (called from compose_guest_update_email at /Users/sobin/Documents/my_projects/reservation/app/services/notification_mail_service.rb:24)
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: The behavior of `attribute_changed?` inside of after callbacks will be changing in the next version of Rails. The new return value will reflect the behavior of calling the method after `save` returned (e.g. the opposite of what it returns now). To maintain the current behavior, use `saved_change_to_attribute?` instead. (called from compose_update_restaurant_email at /Users/sobin/Documents/my_projects/reservation/app/services/notification_mail_service.rb:34)
+DEPRECATION WARNING: The behavior of `attribute_changed?` inside of after callbacks will be changing in the next version of Rails. The new return value will reflect the behavior of calling the method after `save` returned (e.g. the opposite of what it returns now). To maintain the current behavior, use `saved_change_to_attribute?` instead. (called from compose_update_restaurant_email at /Users/sobin/Documents/my_projects/reservation/app/services/notification_mail_service.rb:36)
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ReservationSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 200 OK in 3108ms (Views: 1.0ms | ActiveRecord: 3.6ms)
+
+
+Started PATCH "/reservations/1" for 127.0.0.1 at 2018-01-27 09:22:39 +0530
+Processing by ReservationsController#update as */*
+  Parameters: {"reservation"=>{"guest_party_size"=>5, "requested_date_time"=>"28-1-2019 1.30 PM"}, "id"=>"1"}
+  [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTable Load (0.4ms)[0m  [1m[34mSELECT  "tables".* FROM "tables" WHERE "tables"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 422 Unprocessable Entity in 10ms (Views: 5.3ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/reservations/1" for 127.0.0.1 at 2018-01-27 09:22:49 +0530
+Processing by ReservationsController#update as */*
+  Parameters: {"reservation"=>{"guest_party_size"=>1, "requested_date_time"=>"28-1-2019 1.30 PM"}, "id"=>"1"}
+  [1m[36mReservation Load (0.8ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTable Load (0.9ms)[0m  [1m[34mSELECT  "tables".* FROM "tables" WHERE "tables"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGuest Load (0.6ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: The behavior of `attribute_changed?` inside of after callbacks will be changing in the next version of Rails. The new return value will reflect the behavior of calling the method after `save` returned (e.g. the opposite of what it returns now). To maintain the current behavior, use `saved_change_to_attribute?` instead. (called from compose_guest_update_email at /Users/sobin/Documents/my_projects/reservation/app/services/notification_mail_service.rb:22)
+DEPRECATION WARNING: The behavior of `attribute_changed?` inside of after callbacks will be changing in the next version of Rails. The new return value will reflect the behavior of calling the method after `save` returned (e.g. the opposite of what it returns now). To maintain the current behavior, use `saved_change_to_attribute?` instead. (called from compose_guest_update_email at /Users/sobin/Documents/my_projects/reservation/app/services/notification_mail_service.rb:24)
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: The behavior of `attribute_changed?` inside of after callbacks will be changing in the next version of Rails. The new return value will reflect the behavior of calling the method after `save` returned (e.g. the opposite of what it returns now). To maintain the current behavior, use `saved_change_to_attribute?` instead. (called from compose_update_restaurant_email at /Users/sobin/Documents/my_projects/reservation/app/services/notification_mail_service.rb:34)
+DEPRECATION WARNING: The behavior of `attribute_changed?` inside of after callbacks will be changing in the next version of Rails. The new return value will reflect the behavior of calling the method after `save` returned (e.g. the opposite of what it returns now). To maintain the current behavior, use `saved_change_to_attribute?` instead. (called from compose_update_restaurant_email at /Users/sobin/Documents/my_projects/reservation/app/services/notification_mail_service.rb:36)
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ReservationSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 200 OK in 3285ms (Views: 0.9ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/reservations?restaurant_email=sobi@gmail.com" for 127.0.0.1 at 2018-01-27 12:10:00 +0530
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReservationsController#create as */*
+  Parameters: {"reservation"=>{"guest_email"=>"sobi@gmail.com", "guest_name"=>"sobin", "guest_party_size"=>1, "requested_date_time"=>"30-1-2018 1.30 AM"}, "restaurant_email"=>"sobi@gmail.com"}
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."email" = $1 LIMIT $2[0m  [["email", "sobi@gmail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 10.0ms)
+
+
+  
+ExceptionHandler::OutofShiftTimeExceptionTime (ExceptionHandler::OutofShiftTimeExceptionTime):
+  
+app/controllers/reservations_controller.rb:12:in `create'
+Started POST "/reservations?restaurant_email=sobi@gmail.com" for 127.0.0.1 at 2018-01-27 12:11:24 +0530
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReservationsController#create as */*
+  Parameters: {"reservation"=>{"guest_email"=>"sobi@gmail.com", "guest_name"=>"sobin", "guest_party_size"=>1, "requested_date_time"=>"30-1-2018 1.30 AM"}, "restaurant_email"=>"sobi@gmail.com"}
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."email" = $1 LIMIT $2[0m  [["email", "sobi@gmail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 9.9ms)
+
+
+  
+ExceptionHandler::OutofShiftTimeExceptionTime (ExceptionHandler::OutofShiftTimeExceptionTime):
+  
+app/controllers/reservations_controller.rb:12:in `create'
+Started POST "/reservations?restaurant_email=sobi@gmail.com" for 127.0.0.1 at 2018-01-27 12:20:10 +0530
+  
+ActionController::RoutingError (uninitialized constant ExceptionHandler::MissingParamsError):
+  
+app/controllers/concerns/exception_handler.rb:9:in `block in <module:ExceptionHandler>'
+app/controllers/application_controller.rb:2:in `include'
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/reservations_controller.rb:1:in `<top (required)>'
+Started POST "/reservations?restaurant_email=sobi@gmail.com" for 127.0.0.1 at 2018-01-27 12:20:22 +0530
+  
+ActionController::RoutingError (uninitialized constant ExceptionHandler::MissingParamsError):
+  
+app/controllers/concerns/exception_handler.rb:9:in `block in <module:ExceptionHandler>'
+app/controllers/application_controller.rb:2:in `include'
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/reservations_controller.rb:1:in `<top (required)>'
+Started POST "/reservations?restaurant_email=sobi@gmail.com" for 127.0.0.1 at 2018-01-27 12:23:13 +0530
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant ExceptionHandler::MissingParamsError):
+  
+app/controllers/concerns/exception_handler.rb:9:in `block in <module:ExceptionHandler>'
+app/controllers/application_controller.rb:2:in `include'
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/reservations_controller.rb:1:in `<top (required)>'
+Started POST "/reservations?restaurant_email=sobi@gmail.com" for 127.0.0.1 at 2018-01-27 12:24:15 +0530
+Processing by ReservationsController#create as */*
+  Parameters: {"reservation"=>{"guest_email"=>"sobi@gmail.com", "guest_name"=>"sobin", "guest_party_size"=>1, "requested_date_time"=>"30-1-2018 1.30 AM"}, "restaurant_email"=>"sobi@gmail.com"}
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."email" = $1 LIMIT $2[0m  [["email", "sobi@gmail.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 422 Unprocessable Entity in 37ms (Views: 8.5ms | ActiveRecord: 8.3ms)
+
+
+Started POST "/reservations?restaurant_email=sobi@gmail.com" for 127.0.0.1 at 2018-01-27 12:24:56 +0530
+Processing by ReservationsController#create as */*
+  Parameters: {"reservation"=>{"guest_email"=>"sobi@gmail.com", "guest_name"=>"sobin", "guest_party_size"=>1, "requested_date_time"=>"30-1-2018 1.30 AM"}, "restaurant_email"=>"sobi@gmail.com"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."email" = $1 LIMIT $2[0m  [["email", "sobi@gmail.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.5ms)
+
+
+  
+ExceptionHandler::OutofShiftTimeExceptionError (ExceptionHandler::OutofShiftTimeExceptionError):
+  
+app/controllers/reservations_controller.rb:12:in `create'
+Started POST "/reservations?restaurant_email=sobi@gmail.com" for 127.0.0.1 at 2018-01-27 12:25:11 +0530
+Processing by ReservationsController#create as */*
+  Parameters: {"reservation"=>{"guest_email"=>"sobi@gmail.com", "guest_name"=>"sobin", "guest_party_size"=>1, "requested_date_time"=>"30-1-2018 1.30 AM"}, "restaurant_email"=>"sobi@gmail.com"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."email" = $1 LIMIT $2[0m  [["email", "sobi@gmail.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 422 Unprocessable Entity in 17ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/reservations?restaurant_email=sobni@gmail.com" for 127.0.0.1 at 2018-01-27 12:34:45 +0530
+  
+ActionController::RoutingError (uninitialized constant ExceptionHandler::RestaurantNotoundException):
+  
+app/controllers/concerns/exception_handler.rb:12:in `block in <module:ExceptionHandler>'
+app/controllers/application_controller.rb:2:in `include'
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/reservations_controller.rb:1:in `<top (required)>'
+Started POST "/reservations?restaurant_email=sobni@gmail.com" for 127.0.0.1 at 2018-01-27 12:35:20 +0530
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant ExceptionHandler::RestaurantNotoundException):
+  
+app/controllers/concerns/exception_handler.rb:12:in `block in <module:ExceptionHandler>'
+app/controllers/application_controller.rb:2:in `include'
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/reservations_controller.rb:1:in `<top (required)>'
+Started POST "/reservations?restaurant_email=sobni@gmail.com" for 127.0.0.1 at 2018-01-27 12:36:00 +0530
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant ExceptionHandler::RestaurantNotoundException):
+  
+app/controllers/concerns/exception_handler.rb:12:in `block in <module:ExceptionHandler>'
+app/controllers/application_controller.rb:2:in `include'
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/reservations_controller.rb:1:in `<top (required)>'
+Started POST "/reservations?restaurant_email=sobni@gmail.com" for 127.0.0.1 at 2018-01-27 12:36:32 +0530
+Processing by ReservationsController#create as */*
+  Parameters: {"reservation"=>{"guest_email"=>"sobi@gmail.com", "guest_name"=>"sobin", "guest_party_size"=>1, "requested_date_time"=>"30-1-2018 1.30 AM"}, "restaurant_email"=>"sobni@gmail.com"}
+  [1m[36mRestaurant Load (1.3ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."email" = $1 LIMIT $2[0m  [["email", "sobni@gmail.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 422 Unprocessable Entity in 90ms (Views: 53.2ms | ActiveRecord: 8.4ms)
+
+
+Started POST "/tables?restaurant_email=sohbi@gmail.com" for 127.0.0.1 at 2018-01-27 12:42:54 +0530
+Processing by TablesController#create as */*
+  Parameters: {"table"=>{"restaurant_email"=>"sobi@gmail.com", "number"=>"5", "number_of_seats"=>"5"}, "restaurant_email"=>"sohbi@gmail.com"}
+  [1m[36mRestaurant Load (0.8ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."email" = $1 LIMIT $2[0m  [["email", "sobi@gmail.com"], ["LIMIT", 1]]
+Unpermitted parameter: :restaurant_email
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "tables" ("number", "number_of_seats", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["number", 5], ["number_of_seats", 5], ["restaurant_id", 1], ["created_at", "2018-01-27 07:12:54.659212"], ["updated_at", "2018-01-27 07:12:54.659212"]]
+  [1m[35m (40.9ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered TableSerializer with ActiveModelSerializers::Adapter::Attributes (6.86ms)
+Completed 200 OK in 297ms (Views: 88.4ms | ActiveRecord: 68.4ms)
+
+
+Started POST "/tables?restaurant_email=soeehbi@gmail.com" for 127.0.0.1 at 2018-01-27 12:43:07 +0530
+Processing by TablesController#create as */*
+  Parameters: {"table"=>{"restaurant_email"=>"sobi@gmail.com", "number"=>"5", "number_of_seats"=>"5"}, "restaurant_email"=>"soeehbi@gmail.com"}
+  [1m[36mRestaurant Load (8.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."email" = $1 LIMIT $2[0m  [["email", "sobi@gmail.com"], ["LIMIT", 1]]
+Unpermitted parameter: :restaurant_email
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "tables" ("number", "number_of_seats", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["number", 5], ["number_of_seats", 5], ["restaurant_id", 1], ["created_at", "2018-01-27 07:13:07.163405"], ["updated_at", "2018-01-27 07:13:07.163405"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered TableSerializer with ActiveModelSerializers::Adapter::Attributes (0.94ms)
+Completed 200 OK in 29ms (Views: 2.0ms | ActiveRecord: 13.3ms)
+
+
+Started POST "/tables" for 127.0.0.1 at 2018-01-27 12:43:31 +0530
+Processing by TablesController#create as */*
+  Parameters: {"table"=>{"restaurant_email"=>"sobdddi@gmail.com", "number"=>"5", "number_of_seats"=>"5"}}
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."email" = $1 LIMIT $2[0m  [["email", "sobdddi@gmail.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 422 Unprocessable Entity in 18ms (Views: 14.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/tables?restaurant_email=soeehbi@gmail.com" for 127.0.0.1 at 2018-01-27 12:44:14 +0530
+Processing by TablesController#create as */*
+  Parameters: {"table"=>{"number"=>"5", "number_of_seats"=>"5"}, "restaurant_email"=>"soeehbi@gmail.com"}
+  [1m[36mRestaurant Load (0.9ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."email" = $1 LIMIT $2[0m  [["email", "soeehbi@gmail.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.28ms)
+Completed 422 Unprocessable Entity in 30ms (Views: 9.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/tables?restaurant_email=soeehbi@gmail.com" for 127.0.0.1 at 2018-01-27 12:44:16 +0530
+Processing by TablesController#create as */*
+  Parameters: {"table"=>{"number"=>"5", "number_of_seats"=>"5"}, "restaurant_email"=>"soeehbi@gmail.com"}
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."email" = $1 LIMIT $2[0m  [["email", "soeehbi@gmail.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 422 Unprocessable Entity in 5ms (Views: 1.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/tables?restaurant_email=soeehbi@gmail.com" for 127.0.0.1 at 2018-01-27 12:45:25 +0530
+Processing by TablesController#create as */*
+  Parameters: {"table"=>{"number"=>"5", "number_of_seats"=>"5"}, "restaurant_email"=>"soeehbi@gmail.com"}
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."email" = $1 LIMIT $2[0m  [["email", "soeehbi@gmail.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 422 Unprocessable Entity in 28ms (Views: 6.5ms | ActiveRecord: 5.9ms)
+
+
+Started POST "/reservations?restaurant_email=sobni@gmail.com" for 127.0.0.1 at 2018-01-27 12:45:37 +0530
+Processing by ReservationsController#create as */*
+  Parameters: {"reservation"=>{"guest_email"=>"sobi@gmail.com", "guest_name"=>"sobin", "guest_party_size"=>1, "requested_date_time"=>"30-1-2018 1.30 AM"}, "restaurant_email"=>"sobni@gmail.com"}
+Completed 500 Internal Server Error in 236ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `set_resturant' for #<ReservationsController:0x007fa55f6715b8>
+Did you mean?  set_reservation):
+  
+app/controllers/reservations_controller.rb:10:in `create'
+Started POST "/reservations?restaurant_email=sobni@gmail.com" for 127.0.0.1 at 2018-01-27 13:14:20 +0530
+Processing by ReservationsController#create as */*
+  Parameters: {"reservation"=>{"guest_email"=>"sobi@gmail.com", "guest_name"=>"sobin", "guest_party_size"=>1, "requested_date_time"=>"30-1-2018 1.30 AM"}, "restaurant_email"=>"sobni@gmail.com"}
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `set_resturant' for #<ReservationsController:0x007fa55ee16a30>
+Did you mean?  set_reservation):
+  
+activesupport (5.1.4) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.4) lib/active_support/callbacks.rb:178:in `block (2 levels) in halting_and_conditional'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.4) lib/active_support/callbacks.rb:179:in `block in halting_and_conditional'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.4) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.4) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/reservations?restaurant_email=sobni@gmail.com" for 127.0.0.1 at 2018-01-27 13:17:37 +0530
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ReservationsController#create as */*
+  Parameters: {"reservation"=>{"guest_email"=>"sobi@gmail.com", "guest_name"=>"sobin", "guest_party_size"=>1, "requested_date_time"=>"30-1-2018 1.30 AM"}, "restaurant_email"=>"sobni@gmail.com"}
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."email" = $1 LIMIT $2[0m  [["email", "sobni@gmail.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 422 Unprocessable Entity in 91ms (Views: 22.5ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/reservations?restaurant_email=sobi@gmail.com" for 127.0.0.1 at 2018-01-27 13:17:49 +0530
+Processing by ReservationsController#create as */*
+  Parameters: {"reservation"=>{"guest_email"=>"sobi@gmail.com", "guest_name"=>"sobin", "guest_party_size"=>1, "requested_date_time"=>"30-1-2018 1.30 AM"}, "restaurant_email"=>"sobi@gmail.com"}
+  [1m[36mRestaurant Load (1.8ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."email" = $1 LIMIT $2[0m  [["email", "sobi@gmail.com"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 422 Unprocessable Entity in 77ms (Views: 0.6ms | ActiveRecord: 18.0ms)
+
+
+Started POST "/reservations?restaurant_email=sobi@gmail.com" for 127.0.0.1 at 2018-01-27 13:18:01 +0530
+Processing by ReservationsController#create as */*
+  Parameters: {"reservation"=>{"guest_email"=>"sobi@gmail.com", "guest_name"=>"sobin", "guest_party_size"=>1, "requested_date_time"=>"30-1-2018 1 PM"}, "restaurant_email"=>"sobi@gmail.com"}
+  [1m[36mRestaurant Load (0.6ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."email" = $1 LIMIT $2[0m  [["email", "sobi@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTable Load (1.1ms)[0m  [1m[34mSELECT "tables".* FROM "tables" WHERE (number_of_seats >= 1 and restaurant_id = 1) ORDER BY "tables"."number_of_seats" ASC[0m
+  [1m[36mTable Load (1.5ms)[0m  [1m[34mSELECT "tables".* FROM "tables" INNER JOIN "reservations" ON "reservations"."table_id" = "tables"."id" WHERE ("reservations"."requested_date_time" BETWEEN $1 AND $2) AND "tables"."restaurant_id" = 1[0m  [["requested_date_time", "2018-01-30 13:00:00"], ["requested_date_time", "2018-01-30 14:00:00"]]
+  [1m[36mGuest Load (0.6ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."email" = $1 LIMIT $2[0m  [["email", "sobi@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "reservations" ("guest_id", "table_id", "guest_party_size", "requested_date_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["guest_id", 1], ["table_id", 1], ["guest_party_size", 1], ["requested_date_time", "2018-01-30 13:00:00"], ["created_at", "2018-01-27 07:48:01.192152"], ["updated_at", "2018-01-27 07:48:01.192152"]]
+  [1m[35m (40.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ReservationSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 200 OK in 3743ms (Views: 63.6ms | ActiveRecord: 65.2ms)
+
+
+Started POST "/reservations?restaurant_email=sobi@gmail.com" for 127.0.0.1 at 2018-01-27 13:18:39 +0530
+Processing by ReservationsController#create as */*
+  Parameters: {"reservation"=>{"guest_email"=>"sobi@gmail.com", "guest_name"=>"sobin", "guest_party_size"=>1, "requested_date_time"=>"30-1-2018 1 PM"}, "restaurant_email"=>"sobi@gmail.com"}
+  [1m[36mRestaurant Load (0.7ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."email" = $1 LIMIT $2[0m  [["email", "sobi@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTable Load (1.2ms)[0m  [1m[34mSELECT "tables".* FROM "tables" WHERE (number_of_seats >= 1 and restaurant_id = 1) ORDER BY "tables"."number_of_seats" ASC[0m
+  [1m[36mTable Load (2.0ms)[0m  [1m[34mSELECT "tables".* FROM "tables" INNER JOIN "reservations" ON "reservations"."table_id" = "tables"."id" WHERE ("reservations"."requested_date_time" BETWEEN $1 AND $2) AND "tables"."restaurant_id" = 1[0m  [["requested_date_time", "2018-01-30 13:00:00"], ["requested_date_time", "2018-01-30 14:00:00"]]
+  [1m[36mGuest Load (0.9ms)[0m  [1m[34mSELECT  "guests".* FROM "guests" WHERE "guests"."email" = $1 LIMIT $2[0m  [["email", "sobi@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "reservations" ("guest_id", "table_id", "guest_party_size", "requested_date_time", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["guest_id", 1], ["table_id", 3], ["guest_party_size", 1], ["requested_date_time", "2018-01-30 13:00:00"], ["created_at", "2018-01-27 07:48:49.208323"], ["updated_at", "2018-01-27 07:48:49.208323"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRestaurant Load (0.4ms)[0m  [1m[34mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers] Rendered ReservationSerializer with ActiveModelSerializers::Adapter::Attributes (5.03ms)
+Completed 200 OK in 2085ms (Views: 7.1ms | ActiveRecord: 31.2ms)
+
+

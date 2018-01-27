@@ -1,17 +1,13 @@
 class ReservationsController < ApplicationController
-  rescue_from ExceptionHandler::ReservationAvailabityError, with: :render_reservation_capacity_error
-  rescue_from ExceptionHandler::OutofShiftTimeExceptionTime, with: :render_out_of_shift_time_error
+  before_action :set_resturant,only: %i[create index]
 
   def index
-    set_resturant
     reservations = @current_restaurant.reservations
     render json: reservations
   end
 
   def create
-    # params refactoring
-    set_resturant
-    raise ExceptionHandler::OutofShiftTimeExceptionTime unless include_between_shift_time? && should_be_future_time
+    raise ExceptionHandler::OutofShiftTimeExceptionError unless include_between_shift_time? and should_be_future_time
     reservation = ReservationService.create_reservation(
       guest_email: reservation_create_params[:guest_email],
       guest_name: reservation_create_params[:guest_name],
@@ -24,7 +20,7 @@ class ReservationsController < ApplicationController
 
   def update
     set_reservation
-    raise ExceptionHandler::OutofShiftTimeExceptionTime unless include_between_shift_time? || should_be_future_time
+    raise ExceptionHandler::OutofShiftTimeExceptionError unless include_between_shift_time? and should_be_future_time
     ReservationService.update_reservation(reservation: @reservation, update_reservation_params: reservation_update_params)
     render json: @reservation
   end
@@ -50,21 +46,10 @@ class ReservationsController < ApplicationController
 
   def reservation_update_params
     params.require(:reservation).permit(:guest_party_size, :requested_date_time)
-   end
-
-  def set_resturant
-    @current_restaurant ||= Restaurant.find_by(email: params[:restaurant_email])
-   end
-
-  def render_reservation_capacity_error
-    render json: { message: 'Reservation capacity exceeded' }, status: :unprocessable_entity
-   end
+  end
 
   def parse_time(time)
     DateTime.parse(time).strftime('%H:%M')
-   end
+  end
 
-  def render_out_of_shift_time_error
-    render json: { message: 'Resturant will open in this time' }, status: :unprocessable_entity
-   end
 end

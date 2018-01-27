@@ -9,7 +9,7 @@ class ReservationSerializer < ActiveModel::Serializer
     object.table.number
   end
 
-  def guest_party_size
+  def requested_date_time
     object.requested_date_time.strftime('%m/%d/%Y %I:%M%p ')
   end
 end

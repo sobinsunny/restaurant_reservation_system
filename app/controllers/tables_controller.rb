@@ -17,8 +17,5 @@ class TablesController < ApplicationController
   def table_params
     params.require(:table).permit(:number, :number_of_seats)
   end
-
-  def set_resturant
-    @current_restaurant ||= Restaurant.find_by(email: params[:table][:restaurant_email])
-  end
+  
 end
