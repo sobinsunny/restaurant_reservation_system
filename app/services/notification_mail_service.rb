@@ -3,15 +3,24 @@ class NotificationMailService
     def send_confirmation_mail(reservation)
       customer_mail = compose_guest_email(reservation)
       resturant_email = compose_restaurant_email(reservation)
-      customer_mail.deliver!
-      resturant_email.deliver!
+      begin  
+        customer_mail.deliver!
+        resturant_email.deliver!
+      rescue StandardError => e  
+       puts e     
+      end
     end
 
     def send_update_confiramtion_mail(reservation)
       customer_mail = compose_guest_update_email(reservation)
       resturant_email = compose_update_restaurant_email(reservation)
-      customer_mail.deliver!
-      resturant_email.deliver!
+      begin 
+        customer_mail.deliver!
+        resturant_email.deliver!
+      rescue StandardError => e 
+        puts e     
+      end
+
     end
 
     private
@@ -50,6 +59,7 @@ class NotificationMailService
       mail = Apostle::Mail.new('reservation_confirmation_to_restaurant', email: reservation.restaurant.email)
       mail.guest_email = reservation.guest.email
       mail.table_number = reservation.table.number
+      mail.guest_count = reservation.guest_party_size
       mail.requested_date_time = reservation.requested_date_time.strftime('%m/%d/%Y %I:%M%p ')
       mail
     end
