@@ -6,7 +6,6 @@ class ReservationsController < ApplicationController
     set_resturant
     reservations = @current_restaurant.reservations
     render json: reservations
-
   end
 
   def create
@@ -14,12 +13,12 @@ class ReservationsController < ApplicationController
     set_resturant
     raise ExceptionHandler::OutofShiftTimeExceptionTime unless include_between_shift_time? && should_be_future_time
     reservation = ReservationService.create_reservation(
-                                                          guest_email: reservation_create_params[:guest_email],
-                                                          guest_name: reservation_create_params[:guest_name],
-                                                          guest_party_size: reservation_create_params[:guest_party_size],
-                                                          requested_date_time: reservation_create_params[:requested_date_time],
-                                                          restaurant: @current_restaurant
-                                                       )
+      guest_email: reservation_create_params[:guest_email],
+      guest_name: reservation_create_params[:guest_name],
+      guest_party_size: reservation_create_params[:guest_party_size],
+      requested_date_time: reservation_create_params[:requested_date_time],
+      restaurant: @current_restaurant
+    )
     render json: reservation
   end
 

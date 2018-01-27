@@ -9,12 +9,11 @@ end
 gem 'rails', '~> 5.1.4'
 # Use sqlite3 as the database for Active Record
 # Use Puma as the app server
+gem 'active_model_serializers'
 gem 'apostle'
+gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 gem 'validates_email_format_of'
-gem 'pg', '~> 0.18'
-gem 'active_model_serializers'
-
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'

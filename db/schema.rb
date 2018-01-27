@@ -10,46 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180125122518) do
-
+ActiveRecord::Schema.define(version: 20_180_125_122_518) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "guests", force: :cascade do |t|
-    t.string "email", null: false
-    t.string "name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'guests', force: :cascade do |t|
+    t.string 'email', null: false
+    t.string 'name', null: false
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "reservations", force: :cascade do |t|
-    t.bigint "guest_id", null: false
-    t.bigint "table_id", null: false
-    t.integer "guest_party_size"
-    t.datetime "requested_date_time", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["guest_id"], name: "index_reservations_on_guest_id"
-    t.index ["table_id"], name: "index_reservations_on_table_id"
+  create_table 'reservations', force: :cascade do |t|
+    t.bigint 'guest_id', null: false
+    t.bigint 'table_id', null: false
+    t.integer 'guest_party_size'
+    t.datetime 'requested_date_time', null: false
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['guest_id'], name: 'index_reservations_on_guest_id'
+    t.index ['table_id'], name: 'index_reservations_on_table_id'
   end
 
-  create_table "restaurants", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "email", null: false
-    t.string "phone_number", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table 'restaurants', force: :cascade do |t|
+    t.string 'name', null: false
+    t.string 'email', null: false
+    t.string 'phone_number', null: false
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 
-  create_table "tables", force: :cascade do |t|
-    t.integer "number", null: false
-    t.integer "number_of_seats", default: 1
-    t.bigint "restaurant_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["restaurant_id"], name: "index_tables_on_restaurant_id"
+  create_table 'tables', force: :cascade do |t|
+    t.integer 'number', null: false
+    t.integer 'number_of_seats', default: 1
+    t.bigint 'restaurant_id'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+    t.index ['restaurant_id'], name: 'index_tables_on_restaurant_id'
   end
 
-  add_foreign_key "reservations", "guests"
-  add_foreign_key "reservations", "tables"
+  add_foreign_key 'reservations', 'guests'
+  add_foreign_key 'reservations', 'tables'
 end

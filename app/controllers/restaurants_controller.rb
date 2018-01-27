@@ -9,7 +9,7 @@ class RestaurantsController < ApplicationController
     if restaurant.save
       render json: restaurant, status: :created
     else
-      render json: {error: restaurant.errors }, status: :error
+      render json: { error: restaurant.errors }, status: :error
     end
   end
 

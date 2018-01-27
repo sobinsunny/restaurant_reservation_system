@@ -3346,3 +3346,23 @@ Unpermitted parameter: :restaurant_email
 Completed 200 OK in 67ms (Views: 35.8ms | ActiveRecord: 1.6ms)
 
 
+Started POST "/restaurants" for 127.0.0.1 at 2018-01-27 08:32:07 +0530
+Processing by RestaurantsController#create as */*
+  Parameters: {"restaurant"=>{"email"=>"sobin@l.com", "name"=>"kairali", "phone_number"=>88631414}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."email" = $1 LIMIT $2[0m  [["email", "sobin@l.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 500 Internal Server Error in 106ms (Views: 3.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/restaurants" for 127.0.0.1 at 2018-01-27 08:32:25 +0530
+Processing by RestaurantsController#create as */*
+  Parameters: {"restaurant"=>{"email"=>"sobin.com", "name"=>"kairali", "phone_number"=>8867231414}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."email" = $1 LIMIT $2[0m  [["email", "sobin.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 500 Internal Server Error in 4ms (Views: 0.6ms | ActiveRecord: 0.8ms)
+
+
