@@ -4,8 +4,8 @@ class ReservationsController < ApplicationController
 
   def index
     set_resturant
-    @current_restaurant.reservations
-    render json: 
+    reservations = @current_restaurant.reservations
+    render json: reservations
 
   end
 
