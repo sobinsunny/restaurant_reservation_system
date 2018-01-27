@@ -24,7 +24,7 @@ class ReservationsController < ApplicationController
 
   def update
     set_reservation
-    raise ExceptionHandler::OutofShiftTimeExceptionTime unless include_between_shift_time? && should_be_future_time
+    raise ExceptionHandler::OutofShiftTimeExceptionTime unless include_between_shift_time? || should_be_future_time
     ReservationService.update_reservation(reservation: @reservation, update_reservation_params: reservation_update_params)
     render json: @reservation
   end
