@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ruby Critic - Home</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- StyleSheets -->
+    <link href="assets/stylesheets/bootstrap.min.css" media="screen, projection, print" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/font-awesome.min.css" media="screen, projection, print" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/prettify.custom_theme.css" media="screen, projection, print" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/application.css" media="screen, projection, print" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    <header class="navbar navbar-default navbar-fixed-top">
+      <a href="#menu-toggle" class="btn btn-default hidden-lg visible-sm-* hidden-md visible-xs-* pull-left" id="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
+      <a href="overview.html"><img src="assets/images/logo.png" title="Ruby Critic Logo" width="55"><span class="logo">RUBYCRITIC</span></a>
+    </header>
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <aside id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+          <li class="sidebar-item">
+            <a href="overview.html" class="project-nav-item overview-nav"><i class="fa fa-dashboard"></i>Overview</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="code_index.html" class="project-nav-item code-index-nav"><i class="fa fa-code"></i>Code</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="smells_index.html" class="project-nav-item smells-index-nav"><i class="fa fa-warning"></i>Smells</a>
+          </li>
+        </ul>
+      </aside>
+      <!-- /#sidebar-wrapper -->
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <!-- Page Content -->
+<div id="page-content-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <!--Page Title -->
+      <div class="Page_Title">
+        <h3>Smells</h3>
+      </div>
+      <!--End Page Title -->
+      <div class="Content_Wrapper">
+        <table id="js-index-table" class="table smells-index-table index-table sortable-table">
+          <thead>
+            <tr>
+              <th width="30%" class="table-header">Smell<span class="sort-type"></span></th>
+              <th width="65%" class="table-header">Locations<span class="sort-type"></span></th>
+              <th width="5%" class="table-header">Status<span class="sort-type"></span></th>
+            </tr>
+          </thead>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/channels/application_cable/channel.html#L2">ApplicationCable::Channel</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/channels/application_cable/connection.html#L2">ApplicationCable::Connection</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/controllers/application_controller.html#L1">ApplicationController</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>DuplicateMethodCall</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/controllers/reservations_controller.html#L31">ReservationsController</a>
+                    </li>
+                  
+                    <li role="presentation">
+                      <a href="app/controllers/reservations_controller.html#L32">ReservationsController</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>DuplicateMethodCall</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/controllers/reservations_controller.html#L31">ReservationsController</a>
+                    </li>
+                  
+                    <li role="presentation">
+                      <a href="app/controllers/reservations_controller.html#L32">ReservationsController</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>InstanceVariableAssumption</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/controllers/reservations_controller.html#L1">ReservationsController</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>InstanceVariableAssumption</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/controllers/reservations_controller.html#L1">ReservationsController</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/controllers/reservations_controller.html#L1">ReservationsController</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>UtilityFunction</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/controllers/reservations_controller.html#L59">ReservationsController</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/controllers/restaurants_controller.html#L1">RestaurantsController</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>InstanceVariableAssumption</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/controllers/tables_controller.html#L1">TablesController</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/controllers/tables_controller.html#L1">TablesController</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/exceptions/exception_handler.html#L3">ExceptionHandler::ReservationAvailabityError</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/exceptions/exception_handler.html#L2">ExceptionHandler::ReservationAvailabityError</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/jobs/application_job.html#L1">ApplicationJob</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/mailers/application_mailer.html#L1">ApplicationMailer</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/models/application_record.html#L1">ApplicationRecord</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/models/guest.html#L1">Guest</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/models/reservation.html#L1">Reservation</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/models/restaurant.html#L1">Restaurant</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/models/table.html#L1">Table</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>HighComplexity</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/services/notification_mail_service.html#L29">NotificationMailService</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/services/notification_mail_service.html#L1">NotificationMailService</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>TooManyStatements</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/services/notification_mail_service.html#L40">NotificationMailService</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>TooManyStatements</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/services/notification_mail_service.html#L19">NotificationMailService</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>TooManyStatements</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/services/notification_mail_service.html#L29">NotificationMailService</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>FeatureEnvy</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/services/reservation_service.html#L9">ReservationService</a>
+                    </li>
+                  
+                    <li role="presentation">
+                      <a href="app/services/reservation_service.html#L11">ReservationService</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>FeatureEnvy</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/services/reservation_service.html#L15">ReservationService</a>
+                    </li>
+                  
+                    <li role="presentation">
+                      <a href="app/services/reservation_service.html#L16">ReservationService</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/services/reservation_service.html#L1">ReservationService</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>LongParameterList</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/services/reservation_service.html#L7">ReservationService</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>NilCheck</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="app/services/reservation_service.html#L9">ReservationService</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="config/application.html#L20">RestaurantReservation::Application</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>FeatureEnvy</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125110326_create_guests.html#L4">CreateGuests</a>
+                    </li>
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125110326_create_guests.html#L5">CreateGuests</a>
+                    </li>
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125110326_create_guests.html#L6">CreateGuests</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125110326_create_guests.html#L1">CreateGuests</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>UncommunicativeVariableName</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125110326_create_guests.html#L3">CreateGuests</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>FeatureEnvy</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125110835_create_restaurants.html#L4">CreateRestaurants</a>
+                    </li>
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125110835_create_restaurants.html#L5">CreateRestaurants</a>
+                    </li>
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125110835_create_restaurants.html#L6">CreateRestaurants</a>
+                    </li>
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125110835_create_restaurants.html#L7">CreateRestaurants</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125110835_create_restaurants.html#L1">CreateRestaurants</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>UncommunicativeVariableName</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125110835_create_restaurants.html#L3">CreateRestaurants</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>FeatureEnvy</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125120543_create_tables.html#L4">CreateTables</a>
+                    </li>
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125120543_create_tables.html#L5">CreateTables</a>
+                    </li>
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125120543_create_tables.html#L6">CreateTables</a>
+                    </li>
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125120543_create_tables.html#L7">CreateTables</a>
+                    </li>
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125120543_create_tables.html#L8">CreateTables</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125120543_create_tables.html#L1">CreateTables</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>TooManyStatements</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125120543_create_tables.html#L2">CreateTables</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>UncommunicativeVariableName</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125120543_create_tables.html#L3">CreateTables</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>FeatureEnvy</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125122518_create_reservations.html#L4">CreateReservations</a>
+                    </li>
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125122518_create_reservations.html#L5">CreateReservations</a>
+                    </li>
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125122518_create_reservations.html#L6">CreateReservations</a>
+                    </li>
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125122518_create_reservations.html#L7">CreateReservations</a>
+                    </li>
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125122518_create_reservations.html#L8">CreateReservations</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125122518_create_reservations.html#L1">CreateReservations</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>TooManyStatements</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125122518_create_reservations.html#L2">CreateReservations</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>UncommunicativeVariableName</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="db/migrate/20180125122518_create_reservations.html#L3">CreateReservations</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>DuplicateCode</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="test/controllers/reservations_controller_test.html#L3">ReservationsControllerTest</a>
+                    </li>
+                  
+                    <li role="presentation">
+                      <a href="test/controllers/restaurants_controller_test.html#L3">RestaurantsControllerTest</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="test/controllers/reservations_controller_test.html#L3">ReservationsControllerTest</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="test/controllers/restaurants_controller_test.html#L3">RestaurantsControllerTest</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="test/controllers/tables_controller_test.html#L3">TablesControllerTest</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="test/models/guest_test.html#L3">GuestTest</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="test/models/reservation_test.html#L3">ReservationTest</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="test/models/restaurant_test.html#L3">RestaurantTest</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="test/models/table_test.html#L3">TableTest</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+            <tr>
+              <td>IrresponsibleModule</td>
+              <td>
+                <ul class="nav nav-pills">
+                  
+                    <li role="presentation">
+                      <a href="test/test_helper.html#L4">ActiveSupport::TestCase</a>
+                    </li>
+                  
+                </ul>
+              </td>
+              <td>
+                
+                  <ul class="nav nav-pills">
+                    <li role="presentation">
+                      <td class="centered-cell"><span class="status- circled-text circle"></span></td>
+                    </li>
+                  </ul>
+                
+              </td>
+            </tr>
+          
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /#page-content-wrapper -->
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Javascripts -->
+    <script src='assets/javascripts/jquery.min.js'></script>
+    <script src='assets/javascripts/jquery.tablesorter.min.js'></script>
+    <script src='assets/javascripts/jquery.scrollTo.min.js'></script>
+    <script src='assets/javascripts/jquery.timeago.js'></script>
+    <script src='assets/javascripts/highcharts.src-4.0.1.js'></script>
+    <script src='assets/javascripts/prettify.js'></script>
+    <script src='assets/javascripts/bootstrap.min.js'></script>
+    <script src='assets/javascripts/application.js'></script>
+    <script src='assets/javascripts/jquery.filtertable.min.js'></script>
+  </body>
+</html>

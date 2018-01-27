@@ -13,6 +13,8 @@ gem 'apostle'
 gem 'puma', '~> 3.7'
 gem 'validates_email_format_of'
 gem 'pg', '~> 0.18'
+gem 'active_model_serializers'
+
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'

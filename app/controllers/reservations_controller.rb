@@ -2,7 +2,12 @@ class ReservationsController < ApplicationController
   rescue_from ExceptionHandler::ReservationAvailabityError, with: :render_reservation_capacity_error
   rescue_from ExceptionHandler::OutofShiftTimeExceptionTime, with: :render_out_of_shift_time_error
 
-  def index; end
+  def index
+    set_resturant
+    @current_restaurant.reservations
+    render json: 
+
+  end
 
   def create
     # params refactoring
